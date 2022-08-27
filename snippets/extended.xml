@@ -13,18 +13,37 @@
 
   <!-- system repos -->
   <project path="system/core" name="Lineageextended/android_system_core" remote="github" />
-
+  <project path="system/sepolicy" name="Lineageextended/android_system_sepolicy" remote="github" />
+  
   <!-- packages repos -->
   <project path="packages/apps/Settings" name="Lineageextended/android_packages_apps_Settings" groups="pdk-fs" />
   <project path="packages/apps/Trebuchet" name="Lineageextended/android_packages_apps_Trebuchet" remote="github" />
   <project path="packages/apps/Contacts" name="Lineageextended/android_packages_apps_Contacts" remote="github" />
   <project path="packages/apps/Dialer" name="Lineageextended/android_packages_apps_Dialer" remote="github" />
   <project path="packages/apps/LineageParts" name="Lineageextended/android_packages_apps_LineageParts" />
-  
+  <project path="packages/apps/SetupWizard" name="Lineageextended/android_packages_apps_SetupWizard" />
+    
   <!-- vendor repos -->
   <project path="vendor/lineage" name="Lineageextended/android_vendor_lineage" remote="github" />
+  <project path="vendor/support" name="Lineageextended/android_vendor_support" remote="github" />
+  <project path="vendor/lawnchair" name="Lineageextended/android_vendor_lawnchair" remote="github" />
   
   <!-- lineage sdk -->
   <project path="lineage-sdk" name="Lineageextended/android_lineage-sdk" />
 
+  <!-- Build -->
+  <project path="build/make" name="LineageOS/android_build" groups="pdk" >
+      <copyfile src="core/root.mk" dest="Makefile" />
+      <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+      <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+      <linkfile src="core" dest="build/core" />
+      <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+      <linkfile src="target" dest="build/target" />
+      <linkfile src="tools" dest="build/tools" />
+  </project>
+  
+  <!-- External Repos -->
+  <project path="external/colorkt" name="Lineageextended/android_external_colorkt" remote="github" />
+  <project path="external/themelib" name="Lineageextended/android_external_themelib" remote="github" />
+  
 </manifest>
