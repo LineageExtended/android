@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  
+  <!-- Framework Repos -->
+  <project path="frameworks/base" name="LineageExtended/android_frameworks_base" groups="pdk-cw-fs,pdk-fs" />
+
+  <!-- Packages repos -->
+  <project path="packages/apps/Launcher3" name="LineageExtended/android_packages_apps_Launcher3" />
+  <project path="packages/apps/Settings" name="LineageExtended/android_packages_apps_Settings" groups="pdk-fs" />
+
+  <!-- Build -->
+  <project path="build/make" name="LineageExtended/android_build" groups="pdk" >
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  
+  <!-- Vendor repos -->
+  <project path="vendor/lineage" name="Lineageextended/android_vendor_lineage" remote="github" />
+  <project path="vendor/support" name="Lineageextended/android_vendor_support" remote="github" />
+  <project path="vendor/addons" name="Lineageextended/android_vendor_addons" remote="github" />
+  
+</manifest>
